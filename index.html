@@ -24,7 +24,6 @@
           <div id="scopes" class="row justify-content-center h-100 jobs-deck">
                 <div v-if="scope['fields']['PM']" class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4" v-for="scope in scopes">
                     <div class="card job-card" v-if="scope['fields']['product']" v-bind:class="scope['fields']['product']">
-                        <!--<img :src="scope['fields']['image'][0]['thumbnails']['large']['url']" v-bind:alt="scope['fields']['name-fr']" v-if="scope['fields']['image']" class="card-img-top" style="object-fit: cover; overflow: hidden;" height="200px">-->
                         <div class="card-body">
                           <h2 class="card-title ft-medium">{{ scope['fields']['Scope'] }}</h2>
                           <ul>
@@ -38,10 +37,6 @@
                             <li class="ft-regular" v-if="scope['fields']['PMM']">PMM <span class="badge badge-light badge-pmm">{{ scope['fields']['PMM'] }}</span></li>
                             <li class="ft-regular" v-if="scope['fields']['UX']">UX <span class="badge badge-light badge-ux">{{ scope['fields']['UX'] }}</span></li>
                           </ul>
-                          <div class="ft-regular w6" v-if="scope['fields']['Next 6-weeks']">
-                            <p>Next 6-weeks:</p>
-                            <p><small><blockquote><pre>{{ scope['fields']['Next 6-weeks'] }}</pre></blockquote></small></p>
-                          </div>
                         </div>
                     </div>
                 </div>
