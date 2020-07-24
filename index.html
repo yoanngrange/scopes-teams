@@ -1,194 +1,42 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aliaxis UI</title>
-    <meta name="description" content="Solutions de gestion de fluides pour l'industrie et les infrastructures." />
-    <meta name="keywords" content="aliaxis ui, aui, aliaxis utilities and infrastructures" />
+    <title>Scopes & Teams - AB Tasty</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-aliaxis">
-        <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="img/aliaxis-logo.png" class="img-fluid img-logo">
-                <br>
-                <span class="logo-caption">Utilities &amp; Infrastructures</span>
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <!--<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="segmentsList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Applications
-                    </a>
-                    <div id="segmentsMenu" class="dropdown-menu" aria-labelledby="segmentsList">
-                        <div v-for="segment in segments">
-                          <a class="dropdown-item" href="products.html">{{ segment['fields']['name-fr'] }}</a>
-                        </div>
-                    </div>
-                  </li>-->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="catsList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Par catégorie
-                    </a>
-                    <div id="categoriesMenu" class="dropdown-menu" aria-labelledby="catsList">
-                        <div v-for="category in categories">
-                          <a class="dropdown-item" href="products.html">{{ category['fields']['name-fr'] }}</a>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="matsList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Par matériau
-                    </a>
-                    <div id="materialsMenu" class="dropdown-menu" aria-labelledby="matsList">
-                        <div v-for="material in materials">
-                          <a class="dropdown-item" href="products.html">{{ material['fields']['name'] }}</a>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="systList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Systèmes
-                    </a>
-                    <div id="systemsMenu" class="dropdown-menu" aria-labelledby="systList">
-                        <div v-for="system in systems">
-                          <a class="dropdown-item" href="system.html">{{ system['fields']['name'] }}</a>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Services
-                    </a>
-                    <div id="servicesMenu" class="dropdown-menu" aria-labelledby="servList">
-                      <div v-for="service in services">
-                          <a class="dropdown-item" href="service.html">{{ service['fields']['title-fr'] }}</a>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-        </div>
-    </nav>
 
-
-
-    <section id="home" v-for="hom in home.slice(0, 1)">
-        <div class="row-fluid">
-            <div class="home-img">
-                <img class="artwork" :src="hom['fields']['image'][0]['thumbnails']['large']['url']" v-bind:alt="hom['fields']['title-fr']" v-if="hom['fields']['image']">
-                <div class="cartouche">
-                    <h2 class="ft-bold">{{ hom['fields']['title-fr'] }}</h2>
-                    <p class="lead ft-light">{{ hom['fields']['text-fr'] }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h2 class="ft-medium">Trouvez rapidement la solution</h2>
-                    <p>En découvrant nos produits par <a class="" href="#category">catégorie</a>, <a class="" href="#material">matériau</a><br>ou en comprenant les avantages de nos <a class="" href="#systems">systèmes</a> (solutions complètes)</p>
-                </div>        
-            </div>
-            <a class="anchor" name="job"></a>
-            <div id="segments" class="row justify-content-center h-100 jobs-deck">
-                <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4" v-for="segment in segments">
-                        <div class="card job-card aliaxis-bg">
-                            <img :src="segment['fields']['image'][0]['thumbnails']['large']['url']" v-bind:alt="segment['fields']['name-fr']" v-if="segment['fields']['image']" class="card-img-top" style="object-fit: cover; overflow: hidden;" height="200px">
-                            <div class="card-body">
-                                <h2 class="card-title ft-medium">{{ segment['fields']['name-fr'] }}</h2>
-                                <p class="ft-regular" v-if="segment['fields']['text-fr']">{{ segment['fields']['text-fr'] }}</p>
-                            </div>
+            <div id="scopes" class="row justify-content-center h-100 jobs-deck">
+                <div v-if="scope['fields']['PM']" class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-4" v-for="scope in scopes">
+                    <div class="card job-card ab-bg">
+                        <!--<img :src="scope['fields']['image'][0]['thumbnails']['large']['url']" v-bind:alt="scope['fields']['name-fr']" v-if="scope['fields']['image']" class="card-img-top" style="object-fit: cover; overflow: hidden;" height="200px">-->
+                        <div class="card-body">
+                          <h2 class="card-title ft-medium">{{ scope['fields']['Scope'] }}</h2>
+                          <ul>
+                            <li class="ft-regular" v-if="scope['fields']['Dev Team Manager']">Team Lead <span class="badge badge-light badge-tl">{{ scope['fields']['Dev Team Manager'] }}</span></li>
+                            <li v-if="scope['fields']['Developers']">Developers
+                              <ul>
+                                <li class="ft-regular" v-for="developer in scope['fields']['Developers']"><span class="badge badge-light badge-dv">{{ developer }}</span></li>
+                              </ul>
+                            </li>
+                            <li class="ft-regular" v-if="scope['fields']['PM']">PM <span class="badge badge-light badge-pm">{{ scope['fields']['PM'] }}</span></li>
+                            <li class="ft-regular" v-if="scope['fields']['PMM']">PMM <span class="badge badge-light badge-pmm">{{ scope['fields']['PMM'] }}</span></li>
+                            <li class="ft-regular" v-if="scope['fields']['UX']">UX <span class="badge badge-light badge-ux">{{ scope['fields']['UX'] }}</span></li>
+                          </ul>
+                          <div class="ft-regular w6" v-if="scope['fields']['Next 6-weeks']">
+                            <p>Next 6-weeks:</p>
+                            <p><small><blockquote><pre>{{ scope['fields']['Next 6-weeks'] }}</pre></blockquote></small></p>
+                          </div>
                         </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <a class="anchor" name="category"></a>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h3 class="ft-light text-center">Par catégorie</h3>
-                    <p><small>Découvrez tous nos produits disponibles dans chaque catégorie</small></p>   
-                </div>
-            </div>
-            <div id="categories" class="row justify-content-center h-100">
-                <div v-for="category in categories">
-                    <a class="btn aliaxis-bg btn-categ" href="products.html">
-                        <span class="ft-medium">{{ category['fields']['name-fr'] }}</span>
-                    </a>
-                </div>
-            </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <a class="anchor" name="material"></a>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h3 class="ft-light text-center">Par matériau</h3>
-                    <p><small>Découvrez tous nos produits disponibles dans chaque matériau</small></p>
-                </div>
-            </div>
-            <div id="materials" class="row justify-content-center h-100 jobs-deck">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" v-for="material in materials">
-                    <a href="products.html">
-                        <div class="card job-card aliaxis-bg">
-                            <img :src="material['fields']['image'][0]['thumbnails']['large']['url']" v-bind:alt="material['fields']['name']" v-if="material['fields']['image']" class="card-img-top" style="object-fit: cover; overflow: hidden;" height="200px">
-                            <div class="card-body">
-                                <h2 class="card-title ft-medium">{{ material['fields']['name'] }}</h2>
-                                <a href="products.html" class="btn btn-lg btn-outline-light">Voir les produits</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <a class="anchor" name="systems"></a>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h3 class="ft-light text-center">Systèmes</h3>
-                    <p><small>Des solutions complètes pour couvrir un
-                     besoin bien spécifique</small></p>
-                </div>
-            </div>
-            <div id="systems" class="row justify-content-center h-100 jobs-deck">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4" v-for="system in systems">
-                    <a href="products.html">
-                        <div class="card job-card aliaxis-bg">
-                            <img :src="system['fields']['main-image'][0]['thumbnails']['large']['url']" v-bind:alt="system['fields']['name']" v-if="system['fields']['main-image']" class="card-img-top" style="object-fit: cover; overflow: hidden;" height="200px">
-                            <div class="card-body">
-                                <h2 class="card-title ft-medium">{{ system['fields']['name'] }}</h2>
-                                <h6 class="ft-bold" v-if="system['fields']['tagline-fr']">{{ system['fields']['tagline-fr'] }}</h6>
-                                <p class="ft-regular" v-if="system['fields']['desc-fr']">{{ system['fields']['desc-fr'].substring(0,95)+"[...]" }}</p>
-                                <a href="system.html" class="btn btn-lg btn-outline-light">Voir le système</a>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,12 +48,6 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/air-home.js"></script>
-    <script type="text/javascript" src="js/air-segments.js"></script>
-    <script type="text/javascript" src="js/air-materials.js"></script>
-    <script type="text/javascript" src="js/air-categories.js"></script>
-    <script type="text/javascript" src="js/air-systems.js"></script>
-    <script type="text/javascript" src="js/air-services.js"></script>
-
+  <script type="text/javascript" src="js/scopes.js"></script>
   </body>
 </html>

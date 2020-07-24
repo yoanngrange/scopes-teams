@@ -1,26 +1,26 @@
 var app = new Vue({
-    el: '#products',
+    el: '#scopes',
     data: {
-        products: []
+        scopes: []
     },
     mounted: function(){
-       this.loadProducts(); 
+       this.loadScopes(); 
     },
     methods: {
-        loadProducts: function(){
+        loadScopes: function(){
             
             // Init variables
             var self = this
-            var app_id = "appI8mGMmI9cMIeOj";
+            var app_id = "appiSUVRRDSlPpl3w";
             var app_key = "keyGvoGBlFFUKFnJC";
-            this.products = []
+            this.scopes = []
             axios.get(
-                "https://api.airtable.com/v0/"+app_id+"/products?view=AllProducts",
+                "https://api.airtable.com/v0/"+app_id+"/scopes_teams?view=Grid%20view",
                 { 
                     headers: { Authorization: "Bearer "+app_key } 
                 }
             ).then(function(response){
-                self.products = response.data.records
+                self.scopes = response.data.records
             }).catch(function(error){
                 console.log(error)
             })
