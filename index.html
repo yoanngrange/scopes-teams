@@ -35,7 +35,12 @@
                             </li>
                             <li class="ft-regular" v-if="scope['fields']['PM']">PM <span class="badge badge-light badge-pm">{{ scope['fields']['PM'] }}</span></li>
                             <li class="ft-regular" v-if="scope['fields']['PMM']">PMM <span class="badge badge-light badge-pmm">{{ scope['fields']['PMM'] }}</span></li>
-                            <li class="ft-regular" v-if="scope['fields']['UX']">UX <span class="badge badge-light badge-ux">{{ scope['fields']['UX'] }}</span></li>
+                            <!--<li class="ft-regular" v-if="scope['fields']['UX']">UX <span class="badge badge-light badge-ux">{{ scope['fields']['UX'] }}</span></li>-->
+			    <li v-if="scope['fields']['UX']">Designers
+                              <ul>
+                                <li class="ft-regular" v-for="ux in scope['fields']['UX']"><span class="badge badge-light badge-dv">{{ ux }}</span></li>
+                              </ul>
+                            </li>
                           </ul>
                         </div>
                     </div>
